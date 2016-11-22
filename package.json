@@ -1,6 +1,6 @@
 {
   "name": "ng-radio",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "RxJS-based Angular2 application message bus inspired by Backbone.Radio",
   "main": "dist/ng_radio.js",
   "types": "dist/ng_radio.d.ts",

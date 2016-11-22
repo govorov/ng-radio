@@ -1,13 +1,16 @@
 # Ng-Radio
 
-RxJS-based message bus inspired by [Backbone.Radio](https://github.com/marionettejs/backbone.radio).
-Inject it in your Angular2 application module and have fun.
+RxJS-based message bus service for Angular2 apps inspired by [Backbone.Radio](https://github.com/marionettejs/backbone.radio).
+Inject it in your application module and have fun.
+
 
 There is nothing angular2-specific, though. It is possible to use it in any application.
 
 ## Installation
 
 `npm install --save ng-radio`
+
+[NPM page](https://www.npmjs.com/package/ng-radio)
 
 ## Usage
 
@@ -16,6 +19,23 @@ First, import it:
 `import { NgRadio } from 'ng-radio';`
 
 Then, if using Angular2, inject it as a service (do not forget about providers):
+
+
+```
+......
+import { NgRadio } from 'ng-radio';
+......
+
+@NgModule({
+    imports:[
+		......
+    ],
+    providers: [
+    	.......
+        NgRadio,
+        .......
+    ],
+```
 
 `constructor(private radio: NgRadio){...}`
 
@@ -31,7 +51,7 @@ Since you have `NgRadio` instance in your app, you can use these methods for pas
 
 Patterns may contain multiple segments split by `:`. Use this feature to create namespaces for messages you cast. You can use `*` in `pattern` to subscribe to any matching segment, or use `**` to subscribe to all segments, starting from particular position.
 
-For example, you can use `on('error:*')` and subscribe to all errors, including, for example `error:http`, or `error:internal`:
+For example, you can use `on('error:*')` and subscribe to all errors, including something like `error:http` or `error:internal` and so on:
 
 ```
 radio.cast('app:start',     'started');
