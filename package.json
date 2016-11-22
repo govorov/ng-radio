@@ -1,0 +1,32 @@
+{
+  "name": "ng-radio",
+  "version": "0.0.2",
+  "description": "RxJS-based Angular2 application message bus inspired by Backbone.Radio",
+  "main": "dist/ng_radio.js",
+  "scripts": {
+    "pre-build": "./node_modules/.bin/typings install",
+    "build": "./node_modules/.bin/tsc ./src/ng_radio.ts --lib es6 --outDir ./dist",
+    "test": "./node_modules/.bin/tsc ./spec/*.ts; ./node_modules/.bin/jasmine-node ./spec/"
+  },
+  "repository":{
+    "type":"git",
+    "url":"git+https://github.com/govorov/ng-radio.git"
+  },
+  "keywords": [
+    "angular2",
+    "message-bus",
+    "radio"
+  ],
+  "author": "Stanislav E. Govorov",
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^5.0.0-rc.3"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.2",
+    "jasmine-node": "^1.14.5",
+    "typescript": "^2.0.10",
+    "typings": "^2.0.0",
+    "uuid": "^3.0.0"
+  }
+}
